@@ -23,7 +23,7 @@ def nextWin():
 			numberTrades += 1
 			print("number of trades: ", numberTrades)
 			bought = False
-		if btcusdt_trades[0]['symbol'] == 'BTCUSDT' and bought == False and btcusdt_trades[0]['isBuyer'] == True and float(client.get_asset_balance(asset='BTC')['free']) != 0 and float(client.get_asset_balance(asset='BTC')['locked']) == 0:
+		if btcusdt_trades[0]['symbol'] == 'BTCUSDT' and bought == False and btcusdt_trades[0]['isBuyer'] == True and float(client.get_asset_balance(asset='USDT')['locked']) == 0 and float(client.get_asset_balance(asset='BTC')['free']) != 0 and float(client.get_asset_balance(asset='BTC')['locked']) == 0:
 			bought = True
 			print("")
 			buy_price = btcusdt_trades[0]['price']
